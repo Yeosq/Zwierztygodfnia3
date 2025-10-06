@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zwierz Tygodnia</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-storage-compat.js"></script>
+</head>
+<body>
+    <header>
+        <img src="assets/logo.webp" alt="Logo Zwierz Tygodnia" class="logo">
+        <h1>Zwierz Tygodnia</h1>
+        <p>Prześlij zdjęcie swojego pupila i zagłosuj na najlepsze!</p>
+    </header>
+
+    <section class="submission">
+        <h2>Dodaj swojego pupila</h2>
+        <form id="petForm">
+            <input type="text" id="petName" placeholder="Imię zwierzaka" required>
+            <input type="text" id="discordNick" placeholder="Twój nick Discord" required>
+            <input type="file" id="petPhoto" accept="image/*" required>
+            <button type="submit" class="btn">Prześlij zdjęcie</button>
+        </form>
+        <p id="formMessage"></p>
+    </section>
+
+    <section class="gallery">
+        <h2>Galeria</h2>
+        <div id="photoGallery"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
